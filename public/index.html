@@ -22,21 +22,25 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.8.1/lux/bulmaswatch.min.css"
     />
     <style>
+      .ampersands {
+        vertical-align: middle;
+      }
+
       .headshot {
         margin: auto;
       }
 
-      .summary,
-      .experience,
-      .education,
-      .skills,
-      .miscellany {
+      #summary,
+      #experience,
+      #education,
+      #skills,
+      #miscellany {
         padding-bottom: 2rem;
       }
 
-      .experience .item:not(:last-child),
-      .education .item:not(:last-child) {
-        padding-bottom: 1rem;
+      #experience .item:not(:last-child),
+      #education .item:not(:last-child) {
+        padding-bottom: 1.5rem;
       }
     </style>
     <script>
@@ -50,11 +54,17 @@
     <main class="font-main hyphens-manual optimize-legibility">
       <header class="section has-background-primary">
         <div class="container">
-          <div class="profile columns level has-text-centered-mobile">
+          <div class="columns level has-text-centered">
             <div class="column is-two-fifths">
-              <h1 class="title is-size-1 has-text-white">Parmesh Krishen</h1>
-              <div class="subtitle is-size-4 has-text-white">
-                Software Engineer && UI Architect
+              <h1 class="title is-1 has-text-white">Parmesh Krishen</h1>
+              <div class="subtitle is-5 has-text-white">
+                Father
+                <span class="ampersands is-size-7 is-family-monospace">&&</span>
+                Husband
+                <span class="ampersands is-size-7 is-family-monospace">&&</span>
+                Software Engineer
+                <span class="ampersands is-size-7 is-family-monospace">&&</span>
+                UI Architect
               </div>
             </div>
             <div class="column is-one-fifth">
@@ -109,21 +119,35 @@
         <div class="container">
           <div class="columns">
             <div class="column is-three-fifths">
-              <div class="summary">
-                <h2 class="title is-size-5 has-text-primary">Summary</h2>
-                <p>
-                  I am a self-driven, business-minded software engineer with a
-                  passion for delivering great software within great teams. I
-                  take pride in building solutions that fit the problems and not
-                  vice-versa. I strive daily to grow as a teammate, technical
-                  leader, and open source contributor. These days, I am focused
-                  on all aspects of UI development - including but not limited
-                  to React, TypeScript, frontend libraries, micro frontends,
-                  developer tooling, and GraphQL.
-                </p>
+              <div id="summary">
+                <h2 class="title is-5 has-text-primary">Summary</h2>
+                <div class="content">
+                  <p>
+                    I am a self-driven, business-minded software engineer with a
+                    passion for delivering great software within great teams. I
+                    take pride in building solutions that fit the problems and
+                    not vice-versa. I strive daily to grow as a teammate,
+                    technical leader, and open source contributor.
+                  </p>
+                  <p>
+                    These days, I am focused on all aspects of UI development -
+                    including but not limited to React, TypeScript, frontend
+                    libraries, micro frontends, developer tooling, and GraphQL.
+                  </p>
+                </div>
               </div>
-              <div class="experience">
-                <h2 class="title is-size-5 has-text-primary">Experience</h2>
+              <div id="experience">
+                <h2 class="title is-5 has-text-primary">Experience</h2>
+                <div class="item">
+                  <div class="is-size-5">
+                    <b>Balyasny Asset Management</b>
+                    <span> | </span>
+                    <i>Senior Software Engineer</i>
+                  </div>
+                  <div class="is-size-7">
+                    January 2023 - present | Austin, TX (remote)
+                  </div>
+                </div>
                 <div class="item">
                   <div class="is-size-5">
                     <b>FullStory</b>
@@ -131,7 +155,36 @@
                     <i>Staff Software Engineer</i>
                   </div>
                   <div class="is-size-7">
-                    January 2022 - present | Austin, TX (remote)
+                    January 2022 - January 2023 | Austin, TX (remote)
+                  </div>
+                  <div class="content">
+                    <ul>
+                      <li>
+                        Led a team to deliver internationalization of the all
+                        the frontend and backend modules
+                      </li>
+                      <li>
+                        Authored a fast, esbuild-based frontend build tool to
+                        enhance the developer experience and speed up the CI/CD
+                        pipeline by bringing build times to ~5 seconds and by
+                        adding live reload capabilities within a custom monorepo
+                        setup, ultimately replacing the existing frontend build
+                        infrastructure with it
+                      </li>
+                      <li>
+                        Published a linting plugin for React codebases to
+                        enforce necessary attributes for FullStory integration
+                      </li>
+                      <li>
+                        Developed static analysis tooling to perform mass
+                        operations int eh custom monorepo like codemodding and
+                        assessing interdependencies and usage
+                      </li>
+                      <li>
+                        Architected and spiked an approach for independent
+                        builds and deploys
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div class="item">
@@ -142,6 +195,22 @@
                   </div>
                   <div class="is-size-7">
                     January 2021 - December 2021 | Austin, TX (remote)
+                  </div>
+                  <div class="content">
+                    <ul>
+                      <li>
+                        Worked on Bloks.js, the JavaScript/React adapter portion
+                        of the internal Bloks framework, which enables
+                        application logic to be defined once server-side and
+                        generates native views for iOS, Android, web, and mobile
+                        web, and is integrated across Meta's suite (Facebook,
+                        Messenger, Instagram, WhatsApp, etc.)
+                      </li>
+                      <li>
+                        Consulted with various product teams across Meta to
+                        determine fit and assess developer experience
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div class="item">
@@ -355,24 +424,26 @@
               </div>
             </div>
             <div class="column is-two-fifths">
-              <div class="education">
-                <h2 class="title is-size-5 has-text-primary">Education</h2>
+              <div id="education">
+                <h2 class="title is-5 has-text-primary">Education</h2>
                 <div class="item">
                   <div class="is-size-5"><b>University of Houston</b></div>
                   <div class="is-size-7">2007 - 2012 | Houston, TX</div>
-                  <p>
-                    Bachelor of Science in Computer Science, Minor in
-                    Mathematics
-                  </p>
+                  <div class="content">
+                    <p>
+                      Bachelor of Science in Computer Science, Minor in
+                      Mathematics
+                    </p>
+                  </div>
                 </div>
                 <div class="item">
                   <div class="is-size-5"><b>Oracle Certification</b></div>
                   <div class="is-size-7">2012 | Houston, TX</div>
-                  <p>Associate Java programmer</p>
+                  <div class="content"><p>Associate Java programmer</p></div>
                 </div>
               </div>
-              <div class="skills">
-                <h2 class="title is-size-5 has-text-primary">Skills</h2>
+              <div id="skills">
+                <h2 class="title is-5 has-text-primary">Skills</h2>
                 <div class="tags">
                   <span class="tag is-light is-info is-rounded is-size-6">
                     JavaScript
@@ -393,7 +464,7 @@
                     React
                   </span>
                   <span class="tag is-light is-info is-rounded is-size-6">
-                    Svelte
+                    HTMX
                   </span>
                   <span class="tag is-light is-info is-rounded is-size-6">
                     ExtJS
@@ -414,10 +485,10 @@
                     Cucumber
                   </span>
                   <span class="tag is-light is-info is-rounded is-size-6">
-                    Java
+                    Go
                   </span>
                   <span class="tag is-light is-info is-rounded is-size-6">
-                    Python
+                    Java
                   </span>
                   <span class="tag is-light is-info is-rounded is-size-6">
                     Ruby
@@ -436,6 +507,12 @@
                   </span>
                   <span class="tag is-light is-info is-rounded is-size-6">
                     CI/CD
+                  </span>
+                  <span class="tag is-light is-info is-rounded is-size-6">
+                    Docker
+                  </span>
+                  <span class="tag is-light is-info is-rounded is-size-6">
+                    Kubernetes
                   </span>
                   <span class="tag is-light is-info is-rounded is-size-6">
                     Linux
@@ -459,7 +536,7 @@
                     Web App Architecture
                   </span>
                   <span class="tag is-light is-info is-rounded is-size-6">
-                    Developer Tooling
+                    Developer Experience
                   </span>
                   <span class="tag is-light is-info is-rounded is-size-6">
                     Web Accessibility
@@ -478,8 +555,8 @@
                   </span>
                 </div>
               </div>
-              <div class="miscellany">
-                <h2 class="title is-size-5 has-text-primary">Miscellany</h2>
+              <div id="miscellany">
+                <h2 class="title is-5 has-text-primary">Miscellany</h2>
                 <div class="content">
                   <ul>
                     <li>
