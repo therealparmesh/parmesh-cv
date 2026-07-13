@@ -4,124 +4,21 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5"
     />
     <meta
       name="description"
-      content="Parmesh Krishen is a principal software engineer focused on frontend architecture, developer tooling, and technical leadership."
+      content="Parmesh Krishen is a principal software engineer with deep frontend expertise and broad full-stack experience."
     />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#e1e2e7" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Parmesh Krishen | Principal Software Engineer</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon-192x192.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.8.1/lux/bulmaswatch.min.css"
-    />
-    <style>
-      body {
-        font-size: 16px;
-        letter-spacing: normal;
-        line-height: 1.6;
-      }
-
-      .skip-link {
-        background: #ffffff;
-        color: #222222;
-        left: 1rem;
-        padding: 0.75rem 1rem;
-        position: fixed;
-        top: 1rem;
-        transform: translateY(-200%);
-        z-index: 10;
-      }
-
-      .skip-link:focus {
-        transform: translateY(0);
-      }
-
-      :focus-visible {
-        box-shadow: 0 0 0 5px #005fcc;
-        outline: 3px solid #ffffff;
-        outline-offset: 2px;
-      }
-
-      .profile-header address {
-        font-style: normal;
-      }
-
-      .contact-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .contact-list a {
-        align-items: center;
-        display: inline-flex;
-        min-height: 24px;
-        text-decoration: underline;
-        text-underline-offset: 0.2em;
-      }
-
-      .headshot {
-        margin: auto;
-      }
-
-      .job-heading,
-      .education-heading {
-        font-weight: normal;
-        margin-bottom: 0;
-      }
-
-      .job-title {
-        font-style: italic;
-      }
-
-      .job-meta,
-      .education-meta {
-        font-size: 14px !important;
-        line-height: 1.5;
-        margin-bottom: 0;
-      }
-
-      .content {
-        font-size: 16px;
-      }
-
-      .skills-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      #summary,
-      #experience,
-      #education,
-      #skills,
-      #miscellany {
-        padding-bottom: 2rem;
-      }
-
-      #experience .item:not(:last-child),
-      #education .item:not(:last-child) {
-        padding-bottom: 1.5rem;
-      }
-
-      @media screen and (max-width: 768px) {
-        .profile-header {
-          padding-bottom: 2rem;
-          padding-top: 2rem;
-        }
-
-        .profile-header .title {
-          font-size: 2.5rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
     <script>
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("service-worker.js");
@@ -130,489 +27,428 @@
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to main content</a>
-    <header class="profile-header section has-background-primary">
-      <div class="container">
-        <div class="columns level has-text-centered">
-          <div class="column is-two-fifths">
-            <h1 class="title is-1 has-text-white">Parmesh Krishen</h1>
-            <p class="subtitle is-5 has-text-white">
-              Principal Software Engineer focused on frontend architecture and developer tooling
-            </p>
-          </div>
-          <div class="column is-one-fifth">
-            <div class="headshot image is-128x128">
-              <img
-                class="box is-rounded is-paddingless"
-                src="profile.jpg"
-                width="128"
-                height="128"
-                alt="Portrait of Parmesh Krishen"
-              />
-            </div>
-          </div>
-          <div class="column is-two-fifths">
-            <address>
-              <p class="has-text-weight-light has-text-white level-right">Austin, TX</p>
-              <ul class="contact-list">
-                <li>
-                  <a
-                    class="has-text-weight-light has-text-white level-right"
-                    href="tel:+12817437102"
-                  >
-                    281.743.7102
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="has-text-weight-light has-text-white level-right"
-                    href="mailto:parmesh.krishen@outlook.com"
-                  >
-                    parmesh.krishen@outlook.com
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="has-text-white level-right"
-                    href="https://github.com/therealparmesh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    therealparmesh [GitHub]
-                    <span class="is-sr-only">(opens in a new tab)</span>
-                  </a>
-                </li>
-              </ul>
-            </address>
-          </div>
+
+    <header id="site-header" class="site-header">
+      <div class="page-shell header-layout">
+        <div class="intro">
+          <h1>Parmesh Krishen</h1>
+          <p>Principal Software Engineer building products across the stack</p>
         </div>
+
+        <div class="portrait">
+          <img src="profile.jpg" alt="Portrait of Parmesh Krishen" width="144" height="144" />
+        </div>
+
+        <address class="contact">
+          <ul class="contact-list">
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+              <span>Austin, TX</span>
+            </li>
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.78a2 2 0 0 1-.45 2.11L8.09 9.87a16 16 0 0 0 6 6l1.26-1.26a2 2 0 0 1 2.11-.45c.88.33 1.82.56 2.78.69A2 2 0 0 1 22 16.92Z"
+                />
+              </svg>
+              <a href="tel:+12817437102">281-743-7102</a>
+            </li>
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="1.5" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              <a href="mailto:parmesh.krishen@outlook.com">parmesh.krishen@outlook.com</a>
+            </li>
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m10.6 13.4 2.8-2.8m-5.9 6.7-1.4 1.4a3.5 3.5 0 0 1-5-5l3.5-3.5a3.5 3.5 0 0 1 5 0m6.9-3.5 1.4-1.4a3.5 3.5 0 0 1 5 5l-3.5 3.5a3.5 3.5 0 0 1-5 0"
+                />
+              </svg>
+              <a href="https://github.com/therealparmesh" target="_blank" rel="noopener noreferrer">
+                github.com/therealparmesh
+                <span class="visually-hidden">(opens in a new tab)</span>
+              </a>
+            </li>
+          </ul>
+        </address>
       </div>
     </header>
-    <main id="content" class="font-main optimize-legibility hyphens-manual" tabindex="-1">
-      <div class="section">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-three-fifths">
-              <section id="summary" aria-labelledby="summary-heading">
-                <h2 id="summary-heading" class="title is-5 has-text-primary">Summary</h2>
-                <div class="content">
-                  <p>
-                    Since 2012, I have led React migrations, built design systems and developer
-                    tooling, reduced frontend build times to seconds, and helped teams move toward
-                    independent delivery.
-                  </p>
-                  <p>
-                    My work spans React and TypeScript applications, frontend infrastructure, micro
-                    frontends, GraphQL, static analysis, accessibility, and performance. I lead
-                    technical projects, mentor engineers, and work with product teams on scope and
-                    tradeoffs.
-                  </p>
-                </div>
-              </section>
-              <section id="experience" aria-labelledby="experience-heading">
-                <h2 id="experience-heading" class="title is-5 has-text-primary">Experience</h2>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>DailyPay</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title">Principal Software Engineer</span>
-                  </h3>
-                  <p class="job-meta">
-                    <span><time datetime="2024-04">April 2024</time> to Present</span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Austin, TX (Remote)</span>
-                  </p>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>Balyasny Asset Management</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title">Senior Software Engineer</span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2023-01">January 2023</time> to
-                      <time datetime="2024-04">April 2024</time>
-                    </span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Austin, TX (Remote)</span>
-                  </p>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>FullStory</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title">Staff Software Engineer</span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2022-01">January 2022</time> to
-                      <time datetime="2023-01">January 2023</time>
-                    </span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Austin, TX (Remote)</span>
-                  </p>
-                  <div class="content">
-                    <ul>
-                      <li>
-                        Led a team to deliver internationalization across the frontend and backend
-                        modules
-                      </li>
-                      <li>
-                        Authored a fast, esbuild-based frontend build tool to enhance the developer
-                        experience and speed up the CI/CD pipeline by bringing build times to ~5
-                        seconds and by adding live reload capabilities within a custom monorepo
-                        setup, ultimately replacing the existing frontend build infrastructure with
-                        it
-                      </li>
-                      <li>
-                        Published a linting plugin for React codebases to enforce necessary
-                        attributes for FullStory integration
-                      </li>
-                      <li>
-                        Developed static analysis tooling to perform mass operations in the custom
-                        monorepo, including codemods and analysis of interdependencies and usage
-                      </li>
-                      <li>Architected and spiked an approach for independent builds and deploys</li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>Meta (Facebook)</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title">Software Engineer</span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2021-01">January 2021</time> to
-                      <time datetime="2021-12">December 2021</time>
-                    </span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Austin, TX (Remote)</span>
-                  </p>
-                  <div class="content">
-                    <ul>
-                      <li>
-                        Worked on Bloks.js, the JavaScript/React adapter portion of the internal
-                        Bloks framework, which enables application logic to be defined once
-                        server-side and generates native views for iOS, Android, web, and mobile
-                        web, and is integrated across Meta's suite (Facebook, Messenger, Instagram,
-                        WhatsApp, etc.)
-                      </li>
-                      <li>
-                        Consulted with various product teams across Meta to determine fit and assess
-                        developer experience
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>CS Disco</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title"> Senior Software Architect and Lead UI Engineer </span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2020-01">January 2020</time> to
-                      <time datetime="2021-01">January 2021</time>
-                    </span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Austin, TX</span>
-                  </p>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>CS Disco</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title"> Software Architect and Lead UI Engineer </span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2018-02">February 2018</time> to
-                      <time datetime="2020-01">January 2020</time>
-                    </span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Austin, TX</span>
-                  </p>
-                  <div class="content">
-                    <ul>
-                      <li>
-                        Worked on DISCO Review, an AI-driven ediscovery solution that gives law
-                        firms, corporations, and government agencies total control over their data,
-                        workflows, and costs
-                      </li>
-                      <li>
-                        Led a team of UI engineers dedicated to feature development for the document
-                        viewer, a core piece of the product, while moving it from Backbone to React
-                      </li>
-                      <li>
-                        Improved the existing document viewer implementation to accomplish
-                        industry-best performance backed by logging and performance testing
-                      </li>
-                      <li>
-                        Architected the core design system library using React, CSS-in-JS, and
-                        TypeScript
-                      </li>
-                      <li>
-                        Helped to form the micro frontends architecture along with a migration
-                        strategy to enable UI teams to deploy independently
-                      </li>
-                      <li>
-                        Took initiative to build up the UI team and culture by interviewing,
-                        recruiting, onboarding, mentoring, and evangelizing, as well as owning part
-                        of the professional development training strategy
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>Shibumi</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title">Senior Software Engineer</span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2017-04">April 2017</time> to
-                      <time datetime="2018-02">February 2018</time>
-                    </span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Austin, TX</span>
-                  </p>
-                  <div class="content">
-                    <ul>
-                      <li>
-                        Worked on Shibumi.com, an enterprise software product that manages
-                        high-impact strategy execution
-                      </li>
-                      <li>
-                        Refocused and rearchitected an existing React project to provide business
-                        value
-                      </li>
-                      <li>Led the migration from the legacy UI to a new UI based on React</li>
-                      <li>
-                        Started a company-wide effort to move to Behavior-Driven Development via
-                        Cucumber and presented the new testing strategy at a company event
-                      </li>
-                      <li>Developed end-to-end features around roles and permissions</li>
-                      <li>Helped to transition from a monolith to a microservice architecture</li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>Onit</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title">Software Developer</span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2014-05">May 2014</time> to
-                      <time datetime="2017-04">April 2017</time>
-                    </span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Houston, TX</span>
-                  </p>
-                  <div class="content">
-                    <ul>
-                      <li>
-                        Worked on Onit App Builder, an enterprise platform for creating apps to
-                        simplify business processes
-                      </li>
-                      <li>Led UI development in a complete rewrite of the UI based on React</li>
-                      <li>
-                        Authored a dashboard-like feature called suites to provide valuable
-                        cross-app functionality for power users
-                      </li>
-                      <li>Upgraded the legacy server-rendered UI to an ExtJS single-page app</li>
-                      <li>Delegated project subtasks to an overseas team and managed progress</li>
-                      <li>
-                        Developed a web app that integrated with our in-house project management app
-                        to run stand-up meetings
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>GHG Corporation</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title">Software Consultant</span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2015-08">August 2015</time> to
-                      <time datetime="2016-12">December 2016</time>
-                    </span>
-                    <span>(Concurrent engagement)</span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Houston, TX</span>
-                  </p>
-                  <div class="content">
-                    <ul>
-                      <li>
-                        Recruited by the leadership of the company to help lead their new project
-                      </li>
-                      <li>
-                        Proposed an approach for meeting Section 508 accessibility requirements for
-                        government customers
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>GHG Corporation</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title">Software Engineer</span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2012-08">August 2012</time> to
-                      <time datetime="2014-05">May 2014</time>
-                    </span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Houston, TX</span>
-                  </p>
-                  <div class="content">
-                    <ul>
-                      <li>
-                        Worked on eEMS (now Clockwise), a customizable automated time and attendance
-                        system
-                      </li>
-                      <li>
-                        Helped build the new UI based on ExtJS to upgrade the legacy server-rendered
-                        UI
-                      </li>
-                      <li>Developed an end-to-end QuickBooks Online sync feature</li>
-                      <li>Implemented an automated build process and a CI/CD pipeline</li>
-                      <li>
-                        Improved performance of the legacy Java platform by optimizing SQL queries
-                        and ORM logic
-                      </li>
-                      <li>Helped to implement the new REST API</li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="item">
-                  <h3 class="job-heading is-size-5">
-                    <strong>The US Department of Defense</strong>
-                    <span aria-hidden="true"> | </span>
-                    <span class="job-title">Intern</span>
-                  </h3>
-                  <p class="job-meta">
-                    <span>
-                      <time datetime="2007-08">August 2007</time> to
-                      <time datetime="2009-12">December 2009</time>
-                    </span>
-                    <span>(Seasonal internship)</span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Fort Meade, MD</span>
-                  </p>
-                  <div class="content">
-                    <ul>
-                      <li>Received a scholarship for undergraduate studies</li>
-                      <li>Completed software development coursework and assigned projects</li>
-                    </ul>
-                  </div>
-                </article>
-              </section>
-            </div>
-            <aside class="column is-two-fifths" aria-label="Additional CV details">
-              <section id="education" aria-labelledby="education-heading">
-                <h2 id="education-heading" class="title is-5 has-text-primary">Education</h2>
-                <article class="item">
-                  <h3 class="education-heading is-size-5">
-                    <strong>University of Houston</strong>
-                  </h3>
-                  <p class="education-meta">
-                    <span>
-                      <time datetime="2007">2007</time> to
-                      <time datetime="2012">2012</time>
-                    </span>
-                    <span aria-hidden="true"> | </span>
-                    <span>Houston, TX</span>
-                  </p>
-                  <div class="content">
-                    <p>Bachelor of Science in Computer Science, Minor in Mathematics</p>
-                  </div>
-                </article>
-                <article class="item">
-                  <h3 class="education-heading is-size-5">
-                    <strong>Oracle Certification</strong>
-                  </h3>
-                  <p class="education-meta">
-                    <time datetime="2012">2012</time>
-                    <span aria-hidden="true"> | </span>
-                    <span>Houston, TX</span>
-                  </p>
-                  <div class="content">
-                    <p>Oracle Certified Associate Java Programmer</p>
-                  </div>
-                </article>
-              </section>
-              <section id="skills" aria-labelledby="skills-heading">
-                <h2 id="skills-heading" class="title is-5 has-text-primary">Skills</h2>
-                <ul class="tags skills-list">
-                  <li class="tag is-light is-info is-rounded is-size-6">JavaScript</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">TypeScript</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">CSS</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">HTML</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Node</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">React</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">HTMX</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">ExtJS</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Backbone</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">D3</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Apollo</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Cypress</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Cucumber</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Go</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Java</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Ruby</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">C/C++</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">SQL</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">GraphQL</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">REST</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">CI/CD</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Docker</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Kubernetes</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Linux</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Git</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">AWS</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">PDF</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Excel</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Design Patterns</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Web App Architecture</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Developer Experience</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Web Accessibility</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Web Performance</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Testing</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Project Management</li>
-                  <li class="tag is-light is-info is-rounded is-size-6">Open Source</li>
-                </ul>
-              </section>
-              <section id="miscellany" aria-labelledby="miscellany-heading">
-                <h2 id="miscellany-heading" class="title is-5 has-text-primary">Miscellany</h2>
-                <div class="content">
-                  <ul>
-                    <li>
-                      Skipped a grade and started college with a scholarship and an internship at
-                      age 16
-                    </li>
-                    <li>
-                      Swam competitively and earned the Michael Poor Sportsmanship Award from the
-                      community
-                    </li>
-                    <li>Studied French and learned to play the guitar and the flute</li>
-                  </ul>
-                </div>
-              </section>
-            </aside>
-          </div>
+
+    <main id="content" class="page-shell resume-layout" tabindex="-1">
+      <section id="summary" class="resume-section summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <div class="prose">
+          <p>
+            Principal software engineer with deep frontend expertise and broad full-stack
+            experience. I build and modernize products from frontend applications and design systems
+            through APIs, backend services, data, build tooling, and deployment.
+          </p>
+          <p>
+            I have led migrations, delivered customer-facing features, and built systems that let
+            engineering teams work independently. I lead cross-team projects, mentor engineers, and
+            make architectural decisions around real product constraints.
+          </p>
         </div>
-      </div>
+      </section>
+
+      <section
+        id="experience"
+        class="resume-section experience"
+        aria-labelledby="experience-heading"
+      >
+        <h2 id="experience-heading">Experience</h2>
+
+        <article class="role">
+          <h3>
+            <strong>DailyPay</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Principal Software Engineer</span>
+          </h3>
+          <p class="role-meta">
+            <span><time datetime="2024-04">April 2024</time> to Present</span>
+            <span aria-hidden="true"> | </span>
+            <span>Austin, TX (Remote)</span>
+          </p>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>Balyasny Asset Management</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Senior Software Engineer</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2023-01">January 2023</time> to
+              <time datetime="2024-04">April 2024</time>
+            </span>
+            <span aria-hidden="true"> | </span>
+            <span>Austin, TX (Remote)</span>
+          </p>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>FullStory</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Staff Software Engineer</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2022-01">January 2022</time> to
+              <time datetime="2023-01">January 2023</time>
+            </span>
+            <span aria-hidden="true"> | </span>
+            <span>Austin, TX (Remote)</span>
+          </p>
+          <ul class="achievements">
+            <li>
+              Led a team that delivered internationalization across frontend and backend modules.
+            </li>
+            <li>
+              Replaced FullStory's frontend build system with an esbuild-based tool that completed
+              builds in about five seconds and added live reload.
+            </li>
+            <li>
+              Published a React lint plugin that enforced attributes required for FullStory
+              integration.
+            </li>
+            <li>
+              Built static-analysis tools for monorepo-wide codemods, dependency analysis, and usage
+              analysis.
+            </li>
+            <li>
+              Prototyped an architecture that let frontend teams build and deploy independently.
+            </li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>Meta (Facebook)</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Software Engineer</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2021-01">January 2021</time> to
+              <time datetime="2021-12">December 2021</time>
+            </span>
+            <span aria-hidden="true"> | </span>
+            <span>Austin, TX (Remote)</span>
+          </p>
+          <ul class="achievements">
+            <li>
+              Worked on Bloks.js, Meta's JavaScript and React adapter for rendering server-defined
+              applications across iOS, Android, web, and mobile web. The framework is used across
+              Facebook, Messenger, Instagram, and WhatsApp.
+            </li>
+            <li>Advised Meta product teams on framework fit and developer experience.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>CS Disco</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Senior Software Architect and Lead UI Engineer</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2020-01">January 2020</time> to
+              <time datetime="2021-01">January 2021</time>
+            </span>
+            <span aria-hidden="true"> | </span>
+            <span>Austin, TX</span>
+          </p>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>CS Disco</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Software Architect and Lead UI Engineer</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2018-02">February 2018</time> to
+              <time datetime="2020-01">January 2020</time>
+            </span>
+            <span aria-hidden="true"> | </span>
+            <span>Austin, TX</span>
+          </p>
+          <ul class="achievements">
+            <li>
+              Built features for DISCO Review, an AI-assisted ediscovery product for law firms,
+              companies, and government agencies.
+            </li>
+            <li>
+              Led the UI team for document-viewer features and the migration from Backbone to React.
+            </li>
+            <li>
+              Added instrumentation and performance tests that helped the document viewer reach
+              industry-leading performance.
+            </li>
+            <li>Designed the core design system in React, CSS-in-JS, and TypeScript.</li>
+            <li>
+              Helped define the microfrontend architecture and migration plan that let UI teams
+              deploy independently.
+            </li>
+            <li>
+              Grew the UI engineering team through hiring, onboarding, mentoring, and professional
+              development.
+            </li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>Shibumi</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Senior Software Engineer</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2017-04">April 2017</time> to
+              <time datetime="2018-02">February 2018</time>
+            </span>
+            <span aria-hidden="true"> | </span>
+            <span>Austin, TX</span>
+          </p>
+          <ul class="achievements">
+            <li>Developed features for Shibumi's enterprise strategy-execution platform.</li>
+            <li>Reworked an existing React application around product priorities.</li>
+            <li>Led the migration from the legacy UI to React.</li>
+            <li>
+              Introduced behavior-driven development with Cucumber and presented the testing
+              strategy company-wide.
+            </li>
+            <li>Delivered role and permission features across the stack.</li>
+            <li>Contributed to the transition from a monolith to microservices.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>Onit</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Software Developer</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2014-05">May 2014</time> to
+              <time datetime="2017-04">April 2017</time>
+            </span>
+            <span aria-hidden="true"> | </span>
+            <span>Houston, TX</span>
+          </p>
+          <ul class="achievements">
+            <li>
+              Developed features for Onit App Builder, an enterprise platform for automating
+              business processes.
+            </li>
+            <li>Led UI development for a full React rewrite.</li>
+            <li>
+              Created Suites, a dashboard that gave power users cross-application functionality.
+            </li>
+            <li>Migrated the legacy server-rendered UI to an ExtJS single-page application.</li>
+            <li>Coordinated project work with an overseas engineering team.</li>
+            <li>
+              Built an internal stand-up application integrated with the company's project
+              management system.
+            </li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>GHG Corporation</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Software Consultant</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2015-08">August 2015</time> to
+              <time datetime="2016-12">December 2016</time>
+            </span>
+            <span>(Concurrent engagement)</span>
+            <span aria-hidden="true"> | </span>
+            <span>Houston, TX</span>
+          </p>
+          <ul class="achievements">
+            <li>Recruited by company leadership to help lead a new project.</li>
+            <li>
+              Proposed an approach for meeting Section 508 accessibility requirements for government
+              customers.
+            </li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>GHG Corporation</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Software Engineer</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2012-08">August 2012</time> to
+              <time datetime="2014-05">May 2014</time>
+            </span>
+            <span aria-hidden="true"> | </span>
+            <span>Houston, TX</span>
+          </p>
+          <ul class="achievements">
+            <li>
+              Developed features for eEMS, now Clockwise, a configurable time and attendance
+              platform.
+            </li>
+            <li>Helped build the ExtJS interface that replaced legacy server-rendered screens.</li>
+            <li>Delivered an end-to-end QuickBooks Online synchronization feature.</li>
+            <li>Automated the build process and introduced a CI/CD pipeline.</li>
+            <li>Improved Java performance by optimizing SQL queries and ORM logic.</li>
+            <li>Contributed to the new REST API.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <h3>
+            <strong>The US Department of Defense</strong>
+            <span class="role-separator" aria-hidden="true"> | </span>
+            <span class="role-title">Intern</span>
+          </h3>
+          <p class="role-meta">
+            <span>
+              <time datetime="2007-08">August 2007</time> to
+              <time datetime="2009-12">December 2009</time>
+            </span>
+            <span>(Seasonal internship)</span>
+            <span aria-hidden="true"> | </span>
+            <span>Fort Meade, MD</span>
+          </p>
+          <ul class="achievements">
+            <li>Received a scholarship for undergraduate study.</li>
+            <li>Completed software development coursework and assigned projects.</li>
+          </ul>
+        </article>
+      </section>
+
+      <aside id="sidebar" class="sidebar" aria-label="Education, skills, and interests">
+        <section id="education" class="resume-section" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <article class="credential">
+            <h3>University of Houston</h3>
+            <p class="credential-meta">
+              <span> <time datetime="2007">2007</time> to <time datetime="2012">2012</time> </span>
+              <span aria-hidden="true"> | </span>
+              <span>Houston, TX</span>
+            </p>
+            <p>B.S. in Computer Science, Minor in Mathematics</p>
+          </article>
+          <article class="credential">
+            <h3>Oracle Certification</h3>
+            <p class="credential-meta">
+              <time datetime="2012">2012</time>
+              <span aria-hidden="true"> | </span>
+              <span>Houston, TX</span>
+            </p>
+            <p>Oracle Certified Associate Java Programmer</p>
+          </article>
+        </section>
+
+        <section id="skills" class="resume-section" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+          <dl class="skill-groups">
+            <div>
+              <dt>Frontend</dt>
+              <dd>TypeScript, JavaScript, HTML, CSS, React, HTMX, D3</dd>
+            </div>
+            <div>
+              <dt>APIs and data</dt>
+              <dd>GraphQL, Apollo, REST, SQL</dd>
+            </div>
+            <div>
+              <dt>Architecture and practice</dt>
+              <dd>
+                Web app architecture, design systems, design patterns, micro frontends,
+                accessibility, performance, testing, developer experience, project management, open
+                source
+              </dd>
+            </div>
+            <div>
+              <dt>Tooling and delivery</dt>
+              <dd>
+                Node.js, Bun, AI, Git, Linux, CI/CD, Docker, Kubernetes, Terraform, AWS, PDF, Excel
+              </dd>
+            </div>
+            <div>
+              <dt>Additional languages</dt>
+              <dd>Go, Java, Ruby, C/C++</dd>
+            </div>
+            <div>
+              <dt>Earlier frontend work</dt>
+              <dd>Backbone, ExtJS</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="miscellany" class="resume-section" aria-labelledby="miscellany-heading">
+          <h2 id="miscellany-heading">Outside work</h2>
+          <ul class="compact-list">
+            <li>Skipped a grade and started college at 16 with a scholarship and an internship.</li>
+            <li>
+              Swam competitively and received the Michael Poor Sportsmanship Award from the
+              community.
+            </li>
+            <li>Studied French and learned to play guitar and flute.</li>
+          </ul>
+        </section>
+      </aside>
     </main>
   </body>
 </html>
