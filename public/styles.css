@@ -1,4 +1,6 @@
 :root {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   --background: #e1e2e7;
   --accent: #3760bf;
   --ink: #1f2335;
@@ -273,7 +275,9 @@ svg {
   }
 
   .contact-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
   }
 
   .resume-layout {
@@ -289,18 +293,25 @@ svg {
     border-inline-start: 0;
   }
 
-  .sidebar .resume-section,
+  .sidebar .resume-section:not(:last-child),
   .sidebar .resume-section + .resume-section {
     padding-block: 0;
     border-block-end: 0;
   }
 
-  #miscellany {
+  .sidebar #miscellany {
     grid-column: 1 / -1;
+    padding-block-start: 2rem;
+    border-block-start: 1px solid var(--rule);
   }
 }
 
 @media (width <= 40rem) {
+  .contact-list {
+    display: grid;
+    gap: 0.75rem;
+  }
+
   .page-shell {
     inline-size: min(100% - 2rem, 90rem);
   }
@@ -326,7 +337,7 @@ svg {
     text-align: start;
   }
 
-  #miscellany {
+  .sidebar #miscellany {
     grid-column: auto;
   }
 
@@ -429,14 +440,16 @@ svg {
     border-inline-start: 0;
   }
 
-  .sidebar .resume-section,
+  .sidebar .resume-section:not(:last-child),
   .sidebar .resume-section + .resume-section {
     padding-block: 0;
     border: 0;
   }
 
-  #miscellany {
+  .sidebar #miscellany {
     grid-column: 1 / -1;
+    padding-block-start: 8pt;
+    border-block-start: 1px solid var(--rule);
   }
 
   .experience {
