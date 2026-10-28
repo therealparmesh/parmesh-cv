@@ -179,12 +179,12 @@ svg {
   border-inline-start: 1px solid var(--rule);
 }
 
-.sidebar .resume-section:not(:last-child) {
+.sidebar :where(.resume-section:not(:last-child)) {
   padding-block-end: 2rem;
   border-block-end: 1px solid var(--rule);
 }
 
-.sidebar .resume-section + .resume-section {
+.sidebar :where(.resume-section + .resume-section) {
   padding-block-start: 2rem;
 }
 
@@ -293,13 +293,12 @@ svg {
     border-inline-start: 0;
   }
 
-  .sidebar .resume-section:not(:last-child),
-  .sidebar .resume-section + .resume-section {
+  .sidebar .resume-section {
     padding-block: 0;
     border-block-end: 0;
   }
 
-  .sidebar #miscellany {
+  .sidebar .background-interests {
     grid-column: 1 / -1;
     padding-block-start: 2rem;
     border-block-start: 1px solid var(--rule);
@@ -337,7 +336,7 @@ svg {
     text-align: start;
   }
 
-  .sidebar #miscellany {
+  .sidebar .background-interests {
     grid-column: auto;
   }
 
@@ -440,13 +439,12 @@ svg {
     border-inline-start: 0;
   }
 
-  .sidebar .resume-section:not(:last-child),
-  .sidebar .resume-section + .resume-section {
+  .sidebar .resume-section {
     padding-block: 0;
     border: 0;
   }
 
-  .sidebar #miscellany {
+  .sidebar .background-interests {
     grid-column: 1 / -1;
     padding-block-start: 8pt;
     border-block-start: 1px solid var(--rule);
